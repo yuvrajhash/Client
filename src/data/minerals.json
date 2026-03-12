@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Bauxite",
+    "slug": "bauxite",
+    "formula": "Al₂O₃·2H₂O",
+    "composition": { "Al2O3": "45-55%", "SiO2": "3-7%", "Fe2O3": "5-20%", "TiO2": "2-4%" },
+    "properties": ["High alumina content", "Calcination grade available", "Low iron variants"],
+    "industries": ["Refractories", "Ceramics", "Abrasives"],
+    "origin": ["India", "Australia"],
+    "description": "Premium-grade bauxite sourced for refractory and abrasive applications, available in calcined and raw forms."
+  },
+  {
+    "name": "Chrome Ore",
+    "slug": "chrome-ore",
+    "formula": "FeCr₂O₄",
+    "composition": { "Cr2O3": "36-48%", "FeO": "12-20%", "Al2O3": "10-16%", "MgO": "8-14%" },
+    "properties": ["High chromium content", "Metallurgical and refractory grades", "Lumpy and concentrate forms"],
+    "industries": ["Steel", "Refractories", "Foundry"],
+    "origin": ["South Africa", "Turkey"],
+    "description": "Chrome ore for steel alloy production and refractory manufacturing, sourced from premier deposits."
+  },
+  {
+    "name": "Kaolin (China Clay)",
+    "slug": "kaolin",
+    "formula": "Al₂Si₂O₅(OH)₄",
+    "composition": { "Al2O3": "35-38%", "SiO2": "45-50%", "Fe2O3": "<1%", "TiO2": "<1.5%" },
+    "properties": ["High whiteness", "Fine particle size", "Excellent plasticity"],
+    "industries": ["Ceramics", "Paper", "Paints"],
+    "origin": ["India", "China"],
+    "description": "High-purity kaolin clay for ceramics, paper coating, and specialty applications."
+  },
+  {
+    "name": "Manganese Ore",
+    "slug": "manganese-ore",
+    "formula": "MnO₂",
+    "composition": { "Mn": "30-48%", "Fe": "3-10%", "SiO2": "5-15%", "Al2O3": "2-6%" },
+    "properties": ["Battery and metallurgical grades", "High manganese purity", "Lumpy and fines available"],
+    "industries": ["Steel", "Batteries", "Chemical"],
+    "origin": ["South Africa", "India"],
+    "description": "Manganese ore for steelmaking, battery production, and chemical manufacturing."
+  },
+  {
+    "name": "Feldspar",
+    "slug": "feldspar",
+    "formula": "KAlSi₃O₈ / NaAlSi₃O₈",
+    "composition": { "SiO2": "65-72%", "Al2O3": "16-20%", "K2O": "4-12%", "Na2O": "2-6%" },
+    "properties": ["Potassium and sodium variants", "Fluxing agent", "Low iron content"],
+    "industries": ["Ceramics", "Glass", "Sanitary Ware"],
+    "origin": ["India", "Turkey"],
+    "description": "High-quality feldspar used as a fluxing agent in ceramic and glass production."
+  },
+  {
+    "name": "Silica Sand (Quartz)",
+    "slug": "silica-sand",
+    "formula": "SiO₂",
+    "composition": { "SiO2": "95-99.5%", "Fe2O3": "<0.05%", "Al2O3": "<0.5%" },
+    "properties": ["Ultra-high purity", "Various mesh sizes", "Washed and graded"],
+    "industries": ["Glass", "Foundry", "Construction"],
+    "origin": ["India", "Australia"],
+    "description": "Premium silica sand for float glass, foundry casting, and specialty applications."
+  },
+  {
+    "name": "Calcium Carbonate",
+    "slug": "calcium-carbonate",
+    "formula": "CaCO₃",
+    "composition": { "CaCO3": "95-98.5%", "MgCO3": "0.5-2%", "SiO2": "<1%", "Fe2O3": "<0.1%" },
+    "properties": ["Ground and precipitated grades", "High whiteness", "Micronized variants"],
+    "industries": ["Paints", "Plastics", "Paper", "Construction"],
+    "origin": ["India", "China"],
+    "description": "Ground and precipitated calcium carbonate for industrial and specialty use."
+  },
+  {
+    "name": "Dolomite",
+    "slug": "dolomite",
+    "formula": "CaMg(CO₃)₂",
+    "composition": { "CaCO3": "50-55%", "MgCO3": "40-45%", "SiO2": "<2%", "Fe2O3": "<0.5%" },
+    "properties": ["Raw and calcined forms", "High MgO after calcination", "Refractory grade"],
+    "industries": ["Steel", "Refractories", "Glass", "Agriculture"],
+    "origin": ["India", "Turkey"],
+    "description": "Dolomite for steel flux, refractory linings, and agricultural soil conditioning."
+  },
+  {
+    "name": "Magnesite",
+    "slug": "magnesite",
+    "formula": "MgCO₃",
+    "composition": { "MgO": "43-47%", "SiO2": "<3%", "CaO": "<2%", "Fe2O3": "<1%" },
+    "properties": ["Dead-burned and fused grades", "High refractoriness", "Caustic calcined available"],
+    "industries": ["Refractories", "Steel", "Chemical"],
+    "origin": ["China", "India", "Australia"],
+    "description": "High-purity magnesite for refractory bricks and furnace linings."
+  },
+  {
+    "name": "Bentonite",
+    "slug": "bentonite",
+    "formula": "(Na/Ca)₀.₃₃(Al,Mg)₂Si₄O₁₀(OH)₂",
+    "composition": { "SiO2": "55-65%", "Al2O3": "15-22%", "Fe2O3": "2-5%", "MgO": "2-4%" },
+    "properties": ["Sodium and calcium types", "High swelling capacity", "Foundry and drilling grades"],
+    "industries": ["Foundry", "Drilling", "Construction", "Pet Care"],
+    "origin": ["India", "Turkey"],
+    "description": "Sodium and calcium bentonite for foundry bonding, drilling fluids, and construction."
+  },
+  {
+    "name": "Fluorspar (Fluorite)",
+    "slug": "fluorspar",
+    "formula": "CaF₂",
+    "composition": { "CaF2": "80-97%", "SiO2": "<5%", "CaCO3": "<3%" },
+    "properties": ["Acid grade and metallurgical grade", "High CaF₂ purity", "Lumps and powder"],
+    "industries": ["Steel", "Chemical", "Ceramics"],
+    "origin": ["South Africa", "China"],
+    "description": "Fluorspar for steelmaking flux and hydrofluoric acid production."
+  },
+  {
+    "name": "Talc",
+    "slug": "talc",
+    "formula": "Mg₃Si₄O₁₀(OH)₂",
+    "composition": { "SiO2": "55-63%", "MgO": "28-33%", "CaO": "<2%", "Fe2O3": "<1%" },
+    "properties": ["Extreme softness (Mohs 1)", "High chemical inertness", "Multiple micronized grades"],
+    "industries": ["Ceramics", "Paints", "Plastics", "Pharmaceuticals"],
+    "origin": ["India", "China"],
+    "description": "Micronized talc powder for ceramics, coatings, and pharmaceutical applications."
+  },
+  {
+    "name": "Zircon Sand",
+    "slug": "zircon-sand",
+    "formula": "ZrSiO₄",
+    "composition": { "ZrO2": "64-66%", "SiO2": "32-34%", "Fe2O3": "<0.1%", "TiO2": "<0.2%" },
+    "properties": ["High melting point", "Excellent thermal stability", "Low thermal expansion"],
+    "industries": ["Ceramics", "Refractories", "Foundry", "Nuclear"],
+    "origin": ["Australia", "South Africa"],
+    "description": "Premium zircon sand for advanced ceramics, refractories, and precision casting."
+  },
+  {
+    "name": "Ilmenite",
+    "slug": "ilmenite",
+    "formula": "FeTiO₃",
+    "composition": { "TiO2": "45-60%", "Fe2O3": "20-35%", "SiO2": "<2%", "MnO": "<2%" },
+    "properties": ["Feedstock for TiO₂ pigment", "Various iron content grades", "Sand and rock forms"],
+    "industries": ["Pigments", "Welding", "Aerospace"],
+    "origin": ["India", "Australia"],
+    "description": "Ilmenite as primary feedstock for titanium dioxide pigment and titanium metal production."
+  },
+  {
+    "name": "Rutile",
+    "slug": "rutile",
+    "formula": "TiO₂",
+    "composition": { "TiO2": "93-96%", "Fe2O3": "<1.5%", "SiO2": "<1%", "ZrO2": "<0.5%" },
+    "properties": ["Premium TiO₂ feedstock", "High purity natural grade", "Welding electrode grade"],
+    "industries": ["Pigments", "Welding", "Aerospace"],
+    "origin": ["Australia", "South Africa"],
+    "description": "Natural rutile for high-grade TiO₂ pigment and welding electrode production."
+  },
+  {
+    "name": "Calcined Alumina",
+    "slug": "calcined-alumina",
+    "formula": "α-Al₂O₃",
+    "composition": { "Al2O3": "99.0-99.6%", "Na2O": "<0.5%", "SiO2": "<0.03%", "Fe2O3": "<0.03%" },
+    "properties": ["Ultra-high purity", "Tabular and reactive grades", "Controlled crystal size"],
+    "industries": ["Refractories", "Ceramics", "Abrasives", "Polishing"],
+    "origin": ["India", "China"],
+    "description": "High-purity calcined alumina for technical ceramics, refractories, and surface finishing."
+  }
+]
