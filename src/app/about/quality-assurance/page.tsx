@@ -62,7 +62,7 @@ export default function QualityAssurancePage() {
             </div>
             <div className="relative h-[400px] rounded-sm overflow-hidden shadow-xl">
               <Image 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop"
+                src="/images/minerals/calcium-carbonate.png"
                 alt="Laboratory Testing"
                 fill
                 className="object-cover"

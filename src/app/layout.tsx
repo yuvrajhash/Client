@@ -3,7 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+import HoverFooter from "@/components/ui/demo";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -27,13 +27,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${playfair.variable} antialiased min-h-screen flex flex-col`}>
+      <head>
+        <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap" rel="stylesheet" />
+      </head>
+      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased min-h-screen flex flex-col`}>
         <SmoothScroll>
           <Navbar />
           <main className="flex-grow pt-[80px]">
             {children}
           </main>
-          <Footer />
+          <HoverFooter />
         </SmoothScroll>
       </body>
     </html>

@@ -1,43 +1,90 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-primary-dark: #1E293B;
-  --color-primary: #334155;
+  /* ─── Core Palette ─── */
+  --color-primary-dark: #0B0F19;
+  --color-primary: #0F172A;
+  --color-industrial-steel: #1C2333;
+  --color-accent-copper: #B87333;
+  --color-copper-glow: #D59A4A;
   --color-accent-terra: #C2703E;
   --color-accent-ochre: #B8860B;
   --color-metallic: #9CA3AF;
-  --color-surface: #F8FAFC;
+  --color-surface: #F3F2EE;
   --color-white: #FFFFFF;
   --color-text-primary: #0F172A;
   --color-text-secondary: #475569;
+  --color-slate-text: #7E8694;
 
+  /* ─── Typography ─── */
   --font-serif: var(--font-playfair);
-  --font-sans: var(--font-inter);
+  --font-sans: 'Satoshi', var(--font-inter), sans-serif;
+
+  /* ─── Typography Scale ─── */
+  --text-hero: 4.5rem;       /* 72px */
+  --text-section: 2.5rem;    /* 40px */
+  --text-subheading: 1.375rem; /* 22px */
+  --text-body: 1rem;          /* 16px */
+  --text-micro: 0.875rem;     /* 14px */
 }
 
 :root {
   --background: var(--color-surface);
   --foreground: var(--color-text-primary);
+  --copper-gradient: linear-gradient(135deg, #B87333, #E0A75E);
+  --dark-gradient: linear-gradient(180deg, #0B0F19, #1C2333);
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  font-size: var(--text-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
-  color: var(--color-text-primary);
 }
 
-/* Hide scrollbar for the comparison table horizontally but allow scroll */
+/* ─── Utility Classes ─── */
+.copper-gradient-text {
+  background: var(--copper-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.copper-gradient-bg {
+  background: var(--copper-gradient);
+}
+
+.glass {
+  background: rgba(11, 15, 25, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-light {
+  background: rgba(243, 242, 238, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* ─── Scrollbar ─── */
 .scrollbar-hide::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ─── Selection ─── */
+::selection {
+  background-color: rgba(184, 115, 51, 0.3);
+  color: #0B0F19;
 }

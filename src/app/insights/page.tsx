@@ -10,7 +10,7 @@ const insights = [
     excerpt: "As photovoltaic efficiency demands increase, the tolerance for iron impurities in solar glass drops. We analyze the market shift towards <0.01% Fe₂O₃ silica sand.",
     category: "Market Trends",
     date: "October 12, 2024",
-    image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=800&auto=format&fit=crop"
+    image: "/images/minerals/bauxite.png",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const insights = [
     excerpt: "Recent logistical bottlenecks have highlighted the necessity of multi-origin sourcing for refractory grade bauxite. How Mineralia ensures uninterrupted supply.",
     category: "Logistics",
     date: "September 28, 2024",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8ed7c66a7b?q=80&w=800&auto=format&fit=crop"
+    image: "/images/minerals/kaolin.png",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const insights = [
     excerpt: "A deep dive into how new heat-recovery technologies are reducing the carbon footprint of high-alumina calcination by up to 30%.",
     category: "Sustainability",
     date: "September 15, 2024",
-    image: "https://images.unsplash.com/photo-1542453664-96690af09dc6?q=80&w=800&auto=format&fit=crop"
+    image: "/images/minerals/silica-sand.png",
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ const insights = [
     excerpt: "Examining the strict JIS requirements for Chrome Ore ferroalloys and why stringent lot-by-lot XRF analysis is no longer optional.",
     category: "Technical Specs",
     date: "August 30, 2024",
-    image: "https://images.unsplash.com/photo-1558236109-17a3a9bf4af8?q=80&w=800&auto=format&fit=crop"
+    image: "/images/minerals/bentonite.png",
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const insights = [
     excerpt: "Analysis of the projected battery-grade manganese market and how supply networks must adapt to satisfy EV production timelines.",
     category: "Market Trends",
     date: "August 12, 2024",
-    image: "https://images.unsplash.com/photo-1620803099901-729938b8c2c1?q=80&w=800&auto=format&fit=crop"
+    image: "/images/minerals/rutile.png",
   },
   {
     id: 6,
@@ -50,7 +50,7 @@ const insights = [
     excerpt: "Why the difference between d50 and d90 measurements in Kaolin and Zircon Sand dictates the ultimate surface finish of sanitaryware.",
     category: "Technical Specs",
     date: "July 22, 2024",
-    image: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?q=80&w=800&auto=format&fit=crop"
+    image: "/images/minerals/manganese-ore.png",
   }
 ];
 

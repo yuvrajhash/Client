@@ -1,12 +1,9 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import Link from "next/link";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Factory, Construction, Diamond, Zap, ArrowRight } from "lucide-react";
-
-gsap.registerPlugin(ScrollTrigger);
+import { motion } from "framer-motion";
+import Reveal, { RevealContainer, RevealItem } from "@/components/animations/Reveal";
 
 const industries = [
   {
@@ -14,90 +11,97 @@ const industries = [
     slug: "ceramics",
     icon: Diamond,
     desc: "Premium clays, feldspars, and calcined aluminas for precise thermal properties and stunning glazes.",
+    minerals: ["Kaolin", "Feldspar", "Talc", "Zircon Sand"],
   },
   {
     title: "Refractories",
     slug: "refractories",
     icon: Factory,
     desc: "High-purity bauxite and magnesite essential for extreme heat environments and industrial furnaces.",
+    minerals: ["Bauxite", "Magnesite", "Dolomite", "Chrome Ore"],
   },
   {
     title: "Steel & Metallurgy",
     slug: "steel",
     icon: Construction,
     desc: "Critical ferroalloys and fluxes like chrome ore and fluorspar for high-grade steel manufacturing.",
+    minerals: ["Chrome Ore", "Manganese Ore", "Fluorspar", "Dolomite"],
   },
   {
     title: "Glass Manufacturing",
     slug: "glass",
     icon: Zap,
     desc: "Ultra-pure silica sand and dolomite to ensure unmatched clarity, strength, and perfection.",
+    minerals: ["Silica Sand", "Feldspar", "Dolomite", "CaCO₃"],
   },
 ];
 
 export default function IndustriesSection() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-
-  useEffect(() => {
-    gsap.fromTo(
-      cardsRef.current,
-      { y: 40, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 75%",
-        },
-      }
-    );
-  }, []);
-
   return (
-    <section className="py-24 bg-white border-t border-slate-100" ref={sectionRef}>
-      <div className="container mx-auto px-4 md:px-8 max-w-7xl">
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary-dark mb-6">
-            Industries We Empower
-          </h2>
-          <p className="text-text-secondary text-lg">
-            Our raw materials form the critical backbone of global manufacturing. From high-tech ceramics to foundational steel, we deliver the chemistry that drives innovation.
-          </p>
-        </div>
+    <section className="py-24 bg-white border-t border-slate-100 relative overflow-hidden">
+      {/* Subtle background glow */}
+      <div className="absolute -top-40 -right-20 w-80 h-80 rounded-full bg-accent-copper/3 blur-[120px] pointer-events-none" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {industries.map((industry, index) => {
+      <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
+        <Reveal>
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <span className="text-accent-copper font-sans text-sm font-medium tracking-widest uppercase mb-4 block">Industries We Empower</span>
+            <h2 className="font-serif text-[clamp(1.75rem,4vw,2.5rem)] font-bold text-primary-dark mb-6">
+              Powering Global Manufacturing
+            </h2>
+            <p className="text-slate-text text-lg font-sans font-light leading-relaxed">
+              Our raw materials form the critical backbone of global manufacturing. From high-tech ceramics to foundational steel, we deliver the chemistry that drives innovation.
+            </p>
+          </div>
+        </Reveal>
+
+        <RevealContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" staggerDelay={0.12}>
+          {industries.map((industry) => {
             const Icon = industry.icon;
             return (
-              <div 
-                key={industry.slug}
-                ref={(el) => { cardsRef.current[index] = el; }}
-                className="group relative bg-surface p-8 rounded-sm hover:-translate-y-2 transition-transform duration-300 border border-slate-100 hover:border-slate-200 shadow-sm flex flex-col h-full"
-              >
-                <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm border border-slate-100 text-accent-terra group-hover:bg-accent-terra group-hover:text-white transition-colors">
-                  <Icon size={24} />
-                </div>
-                <h3 className="font-serif text-2xl font-bold text-primary-dark mb-4">
-                  {industry.title}
-                </h3>
-                <p className="text-text-secondary leading-relaxed mb-8 flex-grow">
-                  {industry.desc}
-                </p>
-                <Link
-                  href={`/industries/${industry.slug}`}
-                  className="inline-flex items-center gap-2 text-accent-terra font-medium hover:text-[#A85F33] transition-colors mt-auto"
+              <RevealItem key={industry.slug}>
+                <motion.div
+                  whileHover={{ y: -8, transition: { duration: 0.3 } }}
+                  className="group relative bg-surface p-8 border border-slate-200 hover:border-accent-copper/40 transition-all duration-500 flex flex-col h-full overflow-hidden"
                 >
-                  Learn More
-                  <ArrowRight size={16} />
-                </Link>
-              </div>
+                  {/* Hover copper glow */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                    <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-40 h-40 bg-accent-copper/10 rounded-full blur-[60px]" />
+                  </div>
+
+                  <div className="relative z-10">
+                    <div className="w-14 h-14 rounded-xl bg-primary-dark/5 flex items-center justify-center mb-6 text-slate-text group-hover:bg-accent-copper group-hover:text-white transition-all duration-300">
+                      <Icon size={24} />
+                    </div>
+                    <h3 className="font-serif text-xl font-bold text-primary-dark mb-3 group-hover:text-accent-copper transition-colors">
+                      {industry.title}
+                    </h3>
+                    <p className="text-slate-text leading-relaxed mb-6 flex-grow font-sans text-sm">
+                      {industry.desc}
+                    </p>
+
+                    {/* Mineral relationship tags */}
+                    <div className="flex flex-wrap gap-1.5 mb-6">
+                      {industry.minerals.map((m) => (
+                        <span key={m} className="text-[11px] bg-primary-dark/5 text-slate-text px-2.5 py-1 rounded-full font-sans">
+                          {m}
+                        </span>
+                      ))}
+                    </div>
+
+                    <Link
+                      href={`/industries/${industry.slug}`}
+                      className="inline-flex items-center gap-2 text-accent-copper font-medium hover:text-copper-glow transition-colors text-xs tracking-wider uppercase"
+                    >
+                      Learn More
+                      <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+                    </Link>
+                  </div>
+                </motion.div>
+              </RevealItem>
             );
           })}
-        </div>
+        </RevealContainer>
       </div>
     </section>
   );

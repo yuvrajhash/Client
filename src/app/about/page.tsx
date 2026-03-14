@@ -10,7 +10,7 @@ export default function AboutOverviewPage() {
       <section className="relative h-[50vh] min-h-[400px] w-full flex items-center bg-primary-dark overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-30">
           <Image
-            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1920&auto=format&fit=crop"
+            src="/images/minerals/calcined-alumina.png"
             alt="Mineralia Headquarters"
             fill
             className="object-cover"
@@ -63,7 +63,7 @@ export default function AboutOverviewPage() {
             </div>
             <div className="relative h-[500px] w-full rounded-sm overflow-hidden shadow-xl">
               <Image 
-                src="https://images.unsplash.com/photo-1542453664-96690af09dc6?q=80&w=1200&auto=format&fit=crop"
+                src="/images/minerals/feldspar.png"
                 alt="Mineralia Processing Facility"
                 fill
                 className="object-cover"

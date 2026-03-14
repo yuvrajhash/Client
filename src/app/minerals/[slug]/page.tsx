@@ -29,7 +29,7 @@ export default async function MineralDetailPage({ params }: PageProps) {
       <section className="relative h-[60vh] min-h-[500px] w-full flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src={`https://images.unsplash.com/photo-1629807490025-a4b5ff50e395?q=80&w=1920&auto=format&fit=crop&text=${mineral.name}`}
+            src={`/images/minerals/${mineral.slug}.png`}
             alt={mineral.name}
             fill
             className="object-cover"

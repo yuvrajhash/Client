@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -21,14 +22,11 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [pathname]);
@@ -37,42 +35,48 @@ export default function Navbar() {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out border-b border-transparent",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out border-b",
           isScrolled
-            ? "bg-surface/95 backdrop-blur-md shadow-sm py-4 border-slate-200"
-            : "bg-transparent py-6"
+            ? "glass-light py-3 border-slate-200/50 shadow-sm"
+            : "bg-transparent py-5 border-transparent"
         )}
       >
         <div className="container mx-auto px-4 md:px-8 max-w-7xl flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 z-50">
             <span className="font-serif text-2xl md:text-3xl font-bold tracking-tight text-primary-dark">
-              Mineralia<span className="text-accent-terra">.</span>
+              Mineralia<span className="text-accent-copper">.</span>
             </span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
-            <ul className="flex items-center gap-6">
+            <ul className="flex items-center gap-8">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
                     className={cn(
-                      "text-sm font-medium transition-colors hover:text-accent-terra",
+                      "text-sm font-medium transition-colors duration-300 relative",
                       pathname === link.href
-                        ? "text-accent-terra"
-                        : "text-text-primary"
+                        ? "text-accent-copper"
+                        : "text-text-secondary hover:text-primary-dark"
                     )}
                   >
                     {link.name}
+                    {pathname === link.href && (
+                      <motion.span
+                        layoutId="navbar-indicator"
+                        className="absolute -bottom-1 left-0 right-0 h-0.5 copper-gradient-bg rounded-full"
+                      />
+                    )}
                   </Link>
                 </li>
               ))}
             </ul>
             <Link
               href="/contact"
-              className="bg-accent-terra text-white px-6 py-2.5 rounded-sm font-medium text-sm transition-transform hover:scale-105 shadow-sm"
+              className="inline-flex items-center gap-2 bg-primary-dark hover:bg-accent-copper text-white px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 border border-primary-dark hover:border-accent-copper"
             >
               Get a Quote
             </Link>
@@ -84,47 +88,56 @@ export default function Navbar() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
-            {isMobileMenuOpen ? (
-              <X className="w-7 h-7" />
-            ) : (
-              <Menu className="w-7 h-7" />
-            )}
+            {isMobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </button>
         </div>
       </header>
 
       {/* Mobile Navigation Overlay */}
-      <div
-        className={cn(
-          "fixed inset-0 z-40 bg-surface/98 backdrop-blur-xl flex flex-col items-center justify-center transition-all duration-500 ease-in-out lg:hidden",
-          isMobileMenuOpen
-            ? "opacity-100 pointer-events-auto translate-y-0"
-            : "opacity-0 pointer-events-none -translate-y-4"
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-40 bg-surface/98 backdrop-blur-xl flex flex-col items-center justify-center lg:hidden"
+          >
+            <nav className="flex flex-col items-center gap-8 text-center px-4 w-full">
+              {navLinks.map((link, i) => (
+                <motion.div
+                  key={link.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.08, duration: 0.4 }}
+                >
+                  <Link
+                    href={link.href}
+                    className={cn(
+                      "font-serif text-3xl transition-colors",
+                      pathname === link.href ? "text-accent-copper" : "text-primary-dark"
+                    )}
+                  >
+                    {link.name}
+                  </Link>
+                </motion.div>
+              ))}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.4 }}
+                className="w-full max-w-xs mt-8 border-t border-slate-200 pt-8"
+              >
+                <Link
+                  href="/contact"
+                  className="block w-full bg-primary-dark text-white text-center py-4 rounded-full font-medium text-lg hover:bg-accent-copper transition-colors"
+                >
+                  Get a Quote
+                </Link>
+              </motion.div>
+            </nav>
+          </motion.div>
         )}
-      >
-        <nav className="flex flex-col items-center gap-8 text-center px-4 w-full">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className={cn(
-                "font-serif text-3xl transition-colors",
-                pathname === link.href ? "text-accent-terra" : "text-primary-dark"
-              )}
-            >
-              {link.name}
-            </Link>
-          ))}
-          <div className="w-full max-w-xs mt-8 border-t border-slate-200 pt-8">
-            <Link
-              href="/contact"
-              className="block w-full bg-accent-terra text-white text-center py-4 rounded-sm font-medium text-lg"
-            >
-              Get a Quote
-            </Link>
-          </div>
-        </nav>
-      </div>
+      </AnimatePresence>
     </>
   );
 }

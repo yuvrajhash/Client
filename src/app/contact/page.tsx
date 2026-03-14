@@ -154,7 +154,7 @@ export default function ContactPage() {
                 </h3>
                 <div className="bg-slate-100 h-48 w-full rounded-sm mb-6 flex items-center justify-center border border-slate-200 relative overflow-hidden">
                   {/* Decorative map placeholder */}
-                   <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=800&auto=format&fit=crop')] bg-cover opacity-50 grayscale mix-blend-multiply"></div>
+                   <div className="absolute inset-0 bg-[url('/images/minerals/dolomite.png')] bg-cover opacity-50 grayscale mix-blend-multiply"></div>
                    <div className="relative z-10 w-12 h-12 bg-accent-terra rounded-full flex items-center justify-center text-white shadow-lg animate-bounce">
                       <MapPin size={24} />
                    </div>

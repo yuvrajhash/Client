@@ -33,7 +33,7 @@ export default function SupplyChainPage() {
       <section className="relative h-[60vh] min-h-[500px] w-full flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1586528116311-ad8ed7c66a7b?q=80&w=1920&auto=format&fit=crop"
+            src="/images/minerals/bauxite.png"
             alt="Global Logistics Port"
             fill
             className="object-cover"
@@ -123,7 +123,7 @@ export default function SupplyChainPage() {
             
             <div className="relative h-[400px] rounded-sm overflow-hidden hidden lg:block">
               <Image 
-                src="https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?q=80&w=1920&auto=format&fit=crop"
+                src="/images/minerals/kaolin.png"
                 alt="Renewable Energy Logistics"
                 fill
                 className="object-cover"

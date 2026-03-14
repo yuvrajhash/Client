@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Magnetic from "@/components/animations/Magnetic";
+import Reveal from "@/components/animations/Reveal";
 
 interface CTASectionProps {
   title?: string;
@@ -11,34 +13,42 @@ interface CTASectionProps {
 }
 
 export default function CTASection({
-  title = "Partner With a Global Mineral Supply Leader",
-  description = "Secure your supply chain with premium industrial minerals, backed by 25+ years of excellence and global logistics expertise.",
-  buttonText = "Request a Consultation",
+  title = "Reliable Mineral Supply for Global Industry",
+  description = "Secure your supply chain with precision-grade industrial minerals, backed by 25+ years of excellence and a network spanning 40+ countries.",
+  buttonText = "Request Supply Quote",
   buttonLink = "/contact",
   className,
 }: CTASectionProps) {
   return (
-    <section className={cn("py-24 relative overflow-hidden bg-primary-dark text-white", className)}>
-      {/* Decorative background gradient elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute -top-[30%] -right-[10%] w-[70%] h-[70%] rounded-full bg-accent-terra/10 blur-3xl"></div>
-        <div className="absolute -bottom-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-accent-ochre/10 blur-3xl"></div>
-      </div>
+    <section className={cn("py-32 relative overflow-hidden", className)}>
+      {/* Copper gradient background */}
+      <div className="absolute inset-0 copper-gradient-bg opacity-90" />
+      <div className="absolute inset-0" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.08) 1px, transparent 0)", backgroundSize: "32px 32px" }} />
+
+      {/* Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-white/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-8 max-w-4xl text-center relative z-10">
-        <h2 className="font-serif text-3xl md:text-5xl font-bold mb-6 leading-tight">
-          {title}
-        </h2>
-        <p className="text-slate-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-          {description}
-        </p>
-        <Link
-          href={buttonLink}
-          className="inline-flex items-center gap-2 bg-accent-terra hover:bg-[#A85F33] text-white px-8 py-4 rounded-sm font-medium text-lg transition-transform hover:scale-105 shadow-xl shadow-accent-terra/20"
-        >
-          {buttonText}
-          <ArrowRight size={20} />
-        </Link>
+        <Reveal>
+          <h2 className="font-serif text-[clamp(1.75rem,5vw,3rem)] font-bold mb-6 leading-tight text-white">
+            {title}
+          </h2>
+          <p className="text-white/80 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed font-sans font-light">
+            {description}
+          </p>
+        </Reveal>
+
+        <Reveal delay={0.2}>
+          <Magnetic>
+            <Link
+              href={buttonLink}
+              className="group inline-flex items-center gap-3 bg-white text-primary-dark px-10 py-5 rounded-full font-medium text-lg transition-all duration-300 hover:shadow-[0_0_60px_rgba(255,255,255,0.3)]"
+            >
+              {buttonText}
+              <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+            </Link>
+          </Magnetic>
+        </Reveal>
       </div>
     </section>
   );

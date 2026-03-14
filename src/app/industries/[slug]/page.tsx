@@ -10,7 +10,7 @@ const industryData = [
   {
     slug: "ceramics",
     name: "Ceramics",
-    heroImage: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "/images/minerals/kaolin.png",
     description: "From traditional tableware to advanced technical ceramics, our high-purity minerals provide the structural integrity, thermal stability, and perfect glaze finishes your manufacturing process demands.",
     caseStudy: {
       title: "Advanced Porcelain Production",
@@ -20,7 +20,7 @@ const industryData = [
   {
     slug: "refractories",
     name: "Refractories",
-    heroImage: "https://images.unsplash.com/photo-1504280620857-4560a5e8e815?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "/images/minerals/bauxite.png",
     description: "Our dead-burned magnesite and high-alumina bauxite are critical components for the world's most demanding high-temperature environments, from steel furnaces to cement kilns.",
     caseStudy: {
       title: "Extending Furnace Lining Life",
@@ -30,7 +30,7 @@ const industryData = [
   {
     slug: "steel",
     name: "Steel",
-    heroImage: "https://images.unsplash.com/photo-1558236109-17a3a9bf4af8?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "/images/minerals/chrome-ore.png",
     description: "Mineralia supplies the vital ferroalloys and fluxes required to produce advanced high-strength steels, ensuring precise chemical control over the melt and exceptional final product quality.",
     caseStudy: {
       title: "Precision Alloying for Auto Manufacturing",
@@ -40,7 +40,7 @@ const industryData = [
   {
     slug: "glass",
     name: "Glass",
-    heroImage: "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=1920&auto=format&fit=crop",
+    heroImage: "/images/minerals/silica-sand.png",
     description: "Clarity, strength, and thermal resistance start with the highest quality raw materials. Our ultra-pure silica sand and dolomite ensure the perfection of float glass, fiberglass, and specialty optical products.",
     caseStudy: {
       title: "Solar Panel Glass Clarity",

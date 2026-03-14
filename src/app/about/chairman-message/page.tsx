@@ -40,7 +40,7 @@ export default function ChairmanMessagePage() {
               <div className="md:col-span-4 flex flex-col items-center md:items-start text-center md:text-left">
                 <div className="relative w-48 h-48 md:w-full md:aspect-[3/4] md:h-auto rounded-sm overflow-hidden mb-6 shadow-md filter grayscale-[30%]">
                   <Image
-                    src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=800&auto=format&fit=crop"
+                    src="/images/minerals/zircon-sand.png"
                     alt="Chairman Portrait"
                     fill
                     className="object-cover"

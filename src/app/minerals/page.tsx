@@ -81,7 +81,7 @@ export default function MineralsHub() {
                 >
                   <div className="h-48 relative overflow-hidden bg-slate-100">
                     <Image
-                      src={`https://images.unsplash.com/photo-1629807490025-a4b5ff50e395?q=80&w=600&auto=format&fit=crop&text=${mineral.name}`}
+                      src={`/images/minerals/${mineral.slug}.png`}
                       alt={mineral.name}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"

@@ -9,7 +9,7 @@ export default function IndustriesOverview() {
       <section className="bg-primary-dark text-white pt-24 pb-24 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20 hidden md:block">
           <Image
-            src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1920&auto=format&fit=crop"
+            src="/images/minerals/chrome-ore.png"
             alt="Industrial Background"
             fill
             className="object-cover"
