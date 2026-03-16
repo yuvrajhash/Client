@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, DM_Serif_Display } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
-import HoverFooter from "@/components/ui/demo";
+import HoverFooter from "@/components/layout/HoverFooter";
 import "./globals.css";
 
 const dmSans = DM_Sans({

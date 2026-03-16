@@ -78,7 +78,7 @@ function HoverFooter() {
   ];
 
   return (
-    <footer className="bg-gray-50 relative h-[60rem] md:h-fit rounded-[3rem] overflow-hidden m-4 md:m-8 border border-gray-200">
+    <footer className="bg-gray-50 relative h-auto rounded-[3rem] overflow-hidden m-4 md:m-8 border border-gray-200">
       <div className="max-w-7xl mx-auto p-8 md:p-14 z-40 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 md:gap-8 lg:gap-8 pb-12">
           {/* Brand section */}
@@ -187,7 +187,7 @@ function HoverFooter() {
       </div>
 
       {/* Text hover effect */}
-      <div className="lg:flex hidden h-[20rem] -mt-10 mb-0 justify-center items-center overflow-hidden">
+      <div className="lg:flex hidden h-[20rem] -mt-10 mb-0 justify-center items-center overflow-hidden relative z-0">
         <TextHoverEffect text="MINERALIA" className="z-10" />
       </div>
 

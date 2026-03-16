@@ -95,10 +95,13 @@ export default function HeroCanvasAnimation() {
                 canvas.height = window.innerHeight;
 
                 // Calculate cover-fit scaling (Math.max instead of Math.min)
+                // On mobile, we want to ensure the image covers the height but might crop width
+                // to maintain aspect ratio without letterboxing
                 const scale = Math.max(
                     canvas.width / img.width,
                     canvas.height / img.height
                 );
+                
                 const x = (canvas.width - img.width * scale) / 2;
                 const y = (canvas.height - img.height * scale) / 2;
 
@@ -187,30 +190,30 @@ export default function HeroCanvasAnimation() {
                         {/* OVERLAY 1 — Main headline (center) */}
                         <motion.div
                             style={{ opacity: t1 }}
-                            className="text-center px-6 max-w-4xl"
+                            className="text-center px-4 max-w-4xl w-full"
                         >
-                            <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-mineralia-teal font-semibold mb-4">
+                            <p className="text-[10px] md:text-sm uppercase tracking-[0.2em] text-mineralia-teal font-semibold mb-2 md:mb-4">
                                 Global critical mineral supply leader
                             </p>
-                            <h1 className="font-serif text-7xl md:text-8xl lg:text-9xl tracking-tight text-mineralia-cream mb-5 leading-[0.95]">
+                            <h1 className="font-serif text-4xl sm:text-5xl md:text-8xl lg:text-9xl tracking-tight text-mineralia-cream mb-4 md:mb-5 leading-[1.1] md:leading-[0.95]">
                                 Discover Critical Minerals
                             </h1>
-                            <p className="text-lg md:text-xl text-mineralia-cream/70 max-w-xl mx-auto mb-8">
+                            <p className="text-base md:text-xl text-mineralia-cream/70 max-w-xl mx-auto mb-6 md:mb-8">
                                 Precision-grade industrial minerals sourced from 40+ countries,
                                 backed by 25+ years of supply chain excellence.
                             </p>
-                            <div className="flex gap-4 justify-center pointer-events-auto flex-wrap">
+                            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center pointer-events-auto items-center">
                                 <motion.button
                                     whileHover={{ scale: 1.03 }}
                                     whileTap={{ scale: 0.97 }}
-                                    className="px-8 py-3.5 bg-mineralia-teal text-white rounded-full text-base font-semibold hover:bg-mineralia-teal-hover transition-colors cursor-pointer"
+                                    className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-3.5 bg-mineralia-teal text-white rounded-full text-sm md:text-base font-semibold hover:bg-mineralia-teal-hover transition-colors cursor-pointer"
                                 >
                                     Explore minerals
                                 </motion.button>
                                 <motion.button
                                     whileHover={{ scale: 1.03 }}
                                     whileTap={{ scale: 0.97 }}
-                                    className="px-8 py-3.5 border border-mineralia-cream/20 text-mineralia-cream rounded-full text-base font-medium hover:border-mineralia-teal/50 transition-colors cursor-pointer"
+                                    className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-3.5 border border-mineralia-cream/20 text-mineralia-cream rounded-full text-sm md:text-base font-medium hover:border-mineralia-teal/50 transition-colors cursor-pointer"
                                 >
                                     Request supply
                                 </motion.button>
@@ -220,18 +223,18 @@ export default function HeroCanvasAnimation() {
                         {/* OVERLAY 2 — Sourcing (left) */}
                         <motion.div
                             style={{ opacity: t2 }}
-                            className="absolute inset-0 flex items-center px-8 md:px-16"
+                            className="absolute inset-0 flex items-center justify-center md:justify-start px-6 md:px-16 text-center md:text-left"
                         >
                             <div className="max-w-xl">
-                                <p className="text-xs uppercase tracking-[0.15em] text-mineralia-teal font-semibold mb-3">
+                                <p className="text-[10px] md:text-xs uppercase tracking-[0.15em] text-mineralia-teal font-semibold mb-2 md:mb-3">
                                     Ethical extraction
                                 </p>
-                                <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl text-mineralia-cream mb-4 leading-[1.05]">
+                                <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-mineralia-cream mb-3 md:mb-4 leading-[1.1] md:leading-[1.05]">
                                     Sourced from
                                     <br />
                                     40+ countries
                                 </h2>
-                                <p className="text-lg text-mineralia-cream/60">
+                                <p className="text-base md:text-lg text-mineralia-cream/60">
                                     From premium deposits across six continents, delivering the
                                     chemistry that drives global manufacturing.
                                 </p>
@@ -241,18 +244,18 @@ export default function HeroCanvasAnimation() {
                         {/* OVERLAY 3 — Quality (right) */}
                         <motion.div
                             style={{ opacity: t3 }}
-                            className="absolute inset-0 flex items-center justify-end px-8 md:px-16"
+                            className="absolute inset-0 flex items-center justify-center md:justify-end px-6 md:px-16 text-center md:text-right"
                         >
-                            <div className="max-w-xl text-right">
-                                <p className="text-xs uppercase tracking-[0.15em] text-mineralia-amber font-semibold mb-3">
+                            <div className="max-w-xl">
+                                <p className="text-[10px] md:text-xs uppercase tracking-[0.15em] text-mineralia-amber font-semibold mb-2 md:mb-3">
                                     ISO 9001 certified
                                 </p>
-                                <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl text-mineralia-cream mb-4 leading-[1.05]">
+                                <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-mineralia-cream mb-3 md:mb-4 leading-[1.1] md:leading-[1.05]">
                                     Precision
                                     <br />
                                     processed
                                 </h2>
-                                <p className="text-lg text-mineralia-cream/60">
+                                <p className="text-base md:text-lg text-mineralia-cream/60">
                                     Rigorous lot-by-lot testing ensures exact physical and chemical
                                     specifications every time.
                                 </p>
@@ -262,9 +265,9 @@ export default function HeroCanvasAnimation() {
                         {/* OVERLAY 4 — Final CTA (center) */}
                         <motion.div
                             style={{ opacity: t4 }}
-                            className="text-center px-6"
+                            className="text-center px-4 md:px-6 w-full"
                         >
-                            <h2 className="font-serif text-6xl md:text-7xl lg:text-8xl text-mineralia-cream mb-8 leading-[1.0]">
+                            <h2 className="font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl text-mineralia-cream mb-6 md:mb-8 leading-[1.1] md:leading-[1.0]">
                                 16 premium minerals.
                                 <br />
                                 One trusted partner.
@@ -272,7 +275,7 @@ export default function HeroCanvasAnimation() {
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="px-14 py-4 bg-gradient-to-r from-mineralia-teal to-mineralia-emerald text-white rounded-full text-lg font-semibold shadow-2xl shadow-mineralia-teal/30 pointer-events-auto cursor-pointer"
+                                className="w-full sm:w-auto px-10 md:px-14 py-3 md:py-4 bg-gradient-to-r from-mineralia-teal to-mineralia-emerald text-white rounded-full text-base md:text-lg font-semibold shadow-2xl shadow-mineralia-teal/30 pointer-events-auto cursor-pointer"
                             >
                                 Get a quote
                             </motion.button>
