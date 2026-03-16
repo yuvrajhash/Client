@@ -267,7 +267,7 @@ export default function HeroCanvasAnimation() {
                             style={{ opacity: t4 }}
                             className="text-center px-4 md:px-6 w-full"
                         >
-                            <h2 className="font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl text-mineralia-cream mb-6 md:mb-8 leading-[1.1] md:leading-[1.0]">
+                            <h2 className="font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl text-mineralia-cream mb-6 md:mb-8 leading-[1.1] md:leading-[1.0] drop-shadow-2xl">
                                 16 premium minerals.
                                 <br />
                                 One trusted partner.
@@ -275,7 +275,7 @@ export default function HeroCanvasAnimation() {
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="w-full sm:w-auto px-10 md:px-14 py-3 md:py-4 bg-gradient-to-r from-mineralia-teal to-mineralia-emerald text-white rounded-full text-base md:text-lg font-semibold shadow-2xl shadow-mineralia-teal/30 pointer-events-auto cursor-pointer"
+                                className="w-full sm:w-auto px-10 md:px-14 py-3 md:py-4 bg-gradient-to-r from-mineralia-teal to-mineralia-emerald text-white rounded-full text-base md:text-lg font-bold shadow-[0_0_30px_rgba(16,185,129,0.5)] border-2 border-white/20 hover:border-white transition-all pointer-events-auto cursor-pointer"
                             >
                                 Get a quote
                             </motion.button>
