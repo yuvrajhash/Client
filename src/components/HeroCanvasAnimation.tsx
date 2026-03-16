@@ -183,7 +183,7 @@ export default function HeroCanvasAnimation() {
                     </motion.div>
 
                     {/* Gradient Overlay for Text Readability */}
-                    <div className="absolute inset-0 bg-black/20 pointer-events-none z-10" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/60 pointer-events-none z-10" />
 
                     {/* ── Text Overlays ── */}
                     <div className="absolute inset-0 pointer-events-none flex items-center justify-center z-20">
@@ -225,7 +225,7 @@ export default function HeroCanvasAnimation() {
                             style={{ opacity: t2 }}
                             className="absolute inset-0 flex items-center justify-center md:justify-start px-6 md:px-16 text-center md:text-left"
                         >
-                            <div className="max-w-xl">
+                            <div className="max-w-xl bg-black/40 backdrop-blur-md md:bg-transparent md:backdrop-blur-none p-8 md:p-0 rounded-3xl md:rounded-none border border-white/10 md:border-none mx-4 md:mx-0">
                                 <p className="text-[10px] md:text-xs uppercase tracking-[0.15em] text-mineralia-teal font-semibold mb-2 md:mb-3">
                                     Ethical extraction
                                 </p>
@@ -246,7 +246,7 @@ export default function HeroCanvasAnimation() {
                             style={{ opacity: t3 }}
                             className="absolute inset-0 flex items-center justify-center md:justify-end px-6 md:px-16 text-center md:text-right"
                         >
-                            <div className="max-w-xl">
+                            <div className="max-w-xl bg-black/40 backdrop-blur-md md:bg-transparent md:backdrop-blur-none p-8 md:p-0 rounded-3xl md:rounded-none border border-white/10 md:border-none mx-4 md:mx-0">
                                 <p className="text-[10px] md:text-xs uppercase tracking-[0.15em] text-mineralia-amber font-semibold mb-2 md:mb-3">
                                     ISO 9001 certified
                                 </p>

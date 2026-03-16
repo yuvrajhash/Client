@@ -75,7 +75,7 @@ export default function CoreMinerals() {
     <section className="py-24 bg-surface relative">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         <Reveal>
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
             <div className="max-w-2xl">
               <span className="text-accent-copper font-sans text-sm font-medium tracking-widest uppercase mb-4 block">16+ Mineral Products</span>
               <h2 className="font-serif text-[clamp(1.75rem,4vw,2.5rem)] font-bold text-primary-dark mb-4">

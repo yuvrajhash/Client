@@ -44,7 +44,7 @@ export default function InsightsPreview() {
     <section className="py-24 bg-surface relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         <Reveal>
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
             <div>
               <span className="text-accent-copper font-sans text-sm font-medium tracking-widest uppercase mb-4 block">Market Intelligence</span>
               <h2 className="font-serif text-[clamp(1.75rem,4vw,2.5rem)] font-bold text-primary-dark">
