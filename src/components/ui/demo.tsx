@@ -22,6 +22,7 @@ function HoverFooter() {
         { label: "Quality Assurance", href: "/about/quality-assurance" },
         { label: "Global Supply Chain", href: "/supply-chain" },
         { label: "Market Insights", href: "/insights" },
+        { label: "Careers", href: "/careers" },
         { label: "Japanese Market (日本市場向け)", href: "/minerals-for-japanese-industry" },
       ],
     },
@@ -35,19 +36,33 @@ function HoverFooter() {
         { label: "View All 16 Minerals →", href: "/minerals", pulse: true },
       ],
     },
+    {
+      title: "Quick Links",
+      links: [
+        { label: "Industries", href: "/industries" },
+        { label: "Supply Chain", href: "/supply-chain" },
+        { label: "Insights", href: "/insights" },
+        { label: "Contact", href: "/contact" },
+      ]
+    }
   ];
 
   // Contact info data
   const contactInfo = [
     {
       icon: <MapPin size={18} className="text-[#3ca2fa]" />,
-      text: "100 Global Trade Center, Geneva, Switzerland 1204",
+      text: "HEAD OFFICE : KHASRA NO - 1204, DELHI MEERUT ROAD, MORTA, NEAR - METRO PILLAR NO - 688, DISTRICT GHAZIABAD, UTTAR PRADESH - 201003",
       href: "",
     },
     {
       icon: <Phone size={18} className="text-[#3ca2fa]" />,
       text: "+41 22 555 0192",
       href: "tel:+41225550192",
+    },
+    {
+      icon: <Mail size={18} className="text-[#3ca2fa]" />,
+      text: "contact@mineralia.com",
+      href: "mailto:contact@mineralia.com",
     },
     {
       icon: <Mail size={18} className="text-[#3ca2fa]" />,
@@ -65,7 +80,7 @@ function HoverFooter() {
   return (
     <footer className="bg-gray-50 relative h-[60rem] md:h-fit rounded-[3rem] overflow-hidden m-4 md:m-8 border border-gray-200">
       <div className="max-w-7xl mx-auto p-8 md:p-14 z-40 relative">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 lg:gap-16 pb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 md:gap-8 lg:gap-8 pb-12">
           {/* Brand section */}
           <div className="flex flex-col space-y-4">
             <Link href="/" className="inline-block mb-2">
@@ -164,7 +179,7 @@ function HoverFooter() {
 
           {/* Copyright */}
           <p className="text-center md:text-left text-gray-500">
-            &copy; {new Date().getFullYear()} Mineralia Hub. All rights reserved.
+            &copy; {new Date().getFullYear()} MINERALIA IMPEX PVT. LTD. All rights reserved.
           </p>
         </div>
 

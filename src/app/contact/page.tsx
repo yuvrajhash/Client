@@ -164,9 +164,10 @@ export default function ContactPage() {
                   <li className="flex items-start gap-4">
                     <MapPin size={20} className="text-accent-terra shrink-0 mt-1" />
                     <span className="leading-relaxed">
-                      100 Global Trade Center, <br />
-                      Rue du Rhône, 1204 <br />
-                      Geneva, Switzerland
+                      HEAD OFFICE : KHASRA NO - 1204, <br />
+                      DELHI MEERUT ROAD, MORTA, <br />
+                      NEAR - METRO PILLAR NO - 688, <br />
+                      DISTRICT GHAZIABAD, UTTAR PRADESH - 201003
                     </span>
                   </li>
                   <li className="flex items-center gap-4">

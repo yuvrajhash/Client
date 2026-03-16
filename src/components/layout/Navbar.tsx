@@ -15,6 +15,7 @@ const navLinks = [
   { name: "Industries", href: "/industries" },
   { name: "Supply Chain", href: "/supply-chain" },
   { name: "Insights", href: "/insights" },
+  { name: "Careers", href: "/careers" },
 ];
 
 export default function Navbar() {
@@ -38,7 +39,7 @@ export default function Navbar() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out border-b",
           isScrolled
-            ? "glass-light py-3 border-slate-200/50 shadow-sm"
+            ? "bg-white py-3 border-slate-200/50 shadow-sm"
             : "bg-transparent py-5 border-transparent"
         )}
       >
