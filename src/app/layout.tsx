@@ -1,23 +1,24 @@
-import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
-import "./globals.css";
-import SmoothScroll from "@/components/ui/SmoothScroll";
+import { DM_Sans, DM_Serif_Display } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import HoverFooter from "@/components/ui/demo";
+import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const dmSans = DM_Sans({
   subsets: ["latin"],
+  variable: "--font-dm-sans",
+  weight: ["400", "500", "600", "700"],
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const dmSerif = DM_Serif_Display({
   subsets: ["latin"],
+  variable: "--font-dm-serif",
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
-  title: "Mineralia | Global Mineral Supply Leader",
-  description: "The Global Standard in Critical Mineral Supply. Over 16 mineral products across 40+ countries.",
+  title: "Mineralia | Global Critical Mineral Supply Leader",
+  description:
+    "Precision-grade industrial minerals sourced from 40+ countries, backed by 25+ years of supply chain excellence.",
 };
 
 export default function RootLayout({
@@ -26,18 +27,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap" rel="stylesheet" />
-      </head>
-      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased min-h-screen flex flex-col`}>
-        <SmoothScroll>
-          <Navbar />
-          <main className="flex-grow pt-[80px]">
-            {children}
-          </main>
-          <HoverFooter />
-        </SmoothScroll>
+    <html lang="en" className={`${dmSans.variable} ${dmSerif.variable}`}>
+      <body className="bg-white text-mineralia-navy font-sans antialiased min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <HoverFooter />
       </body>
     </html>
   );

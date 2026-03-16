@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -44,9 +45,17 @@ export default function Navbar() {
         <div className="container mx-auto px-4 md:px-8 max-w-7xl flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 z-50">
-            <span className="font-serif text-2xl md:text-3xl font-bold tracking-tight text-primary-dark">
-              Mineralia<span className="text-accent-copper">.</span>
-            </span>
+            <Image
+              src="/Mineralia LOGO.png"
+              alt="Mineralia Logo"
+              width={180}
+              height={50}
+              className={cn(
+                "h-12 w-auto object-contain transition-all duration-300",
+                !isScrolled && "brightness-0 invert"
+              )}
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -60,7 +69,9 @@ export default function Navbar() {
                       "text-sm font-medium transition-colors duration-300 relative",
                       pathname === link.href
                         ? "text-accent-copper"
-                        : "text-text-secondary hover:text-primary-dark"
+                        : isScrolled
+                          ? "text-gray-600 hover:text-gray-900"
+                          : "text-white/90 hover:text-white"
                     )}
                   >
                     {link.name}
@@ -76,7 +87,12 @@ export default function Navbar() {
             </ul>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-primary-dark hover:bg-accent-copper text-white px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 border border-primary-dark hover:border-accent-copper"
+              className={cn(
+                "inline-flex items-center gap-2 px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 border",
+                isScrolled
+                  ? "bg-primary-dark hover:bg-accent-copper text-white border-primary-dark hover:border-accent-copper"
+                  : "bg-white text-primary-dark hover:bg-accent-copper hover:text-white border-white hover:border-accent-copper"
+              )}
             >
               Get a Quote
             </Link>
@@ -84,7 +100,10 @@ export default function Navbar() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="lg:hidden text-primary-dark z-50 focus:outline-none"
+            className={cn(
+              "lg:hidden z-50 focus:outline-none",
+              !isScrolled && !isMobileMenuOpen ? "text-white" : "text-primary-dark"
+            )}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >

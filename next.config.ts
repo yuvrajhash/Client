@@ -1,18 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-      },
-      {
-        protocol: "https",
-        hostname: "plus.unsplash.com",
-      }
-    ],
-  },
+  distDir: '.build',
+  output: "export",
+  images: { unoptimized: true },
 };
 
 export default nextConfig;

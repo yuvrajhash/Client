@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Phone, MapPin, Linkedin, Twitter } from "lucide-react";
 
 export default function Footer() {
@@ -12,9 +13,13 @@ export default function Footer() {
           {/* Column 1: Company Info */}
           <div>
             <Link href="/" className="inline-block mb-6">
-              <span className="font-serif text-3xl font-bold tracking-tight text-white">
-                Mineralia<span className="text-accent-copper">.</span>
-              </span>
+              <Image
+                src="/Mineralia LOGO.png"
+                alt="Mineralia Logo"
+                width={180}
+                height={50}
+                className="h-12 w-auto object-contain brightness-0 invert"
+              />
             </Link>
             <p className="text-slate-text text-sm leading-relaxed mb-6">
               The global standard in critical mineral supply. Partnering with 
