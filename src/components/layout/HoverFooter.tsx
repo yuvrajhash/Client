@@ -187,7 +187,7 @@ function HoverFooter() {
       </div>
 
       {/* Text hover effect */}
-      <div className="flex h-[12rem] md:h-[20rem] -mt-10 mb-0 justify-center items-center overflow-hidden relative z-0">
+      <div className="flex h-[12rem] md:h-[20rem] -mt-10 mb-0 justify-center items-center overflow-hidden relative z-20 pointer-events-none">
         <TextHoverEffect text="MINERALIA" className="z-10" />
       </div>
 
