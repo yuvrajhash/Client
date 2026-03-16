@@ -144,11 +144,6 @@ export default function HeroCanvasAnimation() {
         [0.56, 0.61, 0.76, 0.8],
         [0, 1, 1, 0]
     );
-    const t4 = useTransform(
-        smoothProgress,
-        [0.84, 0.89, 0.98, 1],
-        [0, 1, 1, 0]
-    );
     const scrollIndicatorOp = useTransform(
         smoothProgress,
         [0, 0.08],
@@ -260,25 +255,6 @@ export default function HeroCanvasAnimation() {
                                     specifications every time.
                                 </p>
                             </div>
-                        </motion.div>
-
-                        {/* OVERLAY 4 — Final CTA (center) */}
-                        <motion.div
-                            style={{ opacity: t4 }}
-                            className="text-center px-4 md:px-6 w-full"
-                        >
-                            <h2 className="font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl text-mineralia-cream mb-6 md:mb-8 leading-[1.1] md:leading-[1.0] drop-shadow-2xl">
-                                16 premium minerals.
-                                <br />
-                                One trusted partner.
-                            </h2>
-                            <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="w-full sm:w-auto px-10 md:px-14 py-3 md:py-4 bg-gradient-to-r from-mineralia-teal to-mineralia-emerald text-white rounded-full text-base md:text-lg font-bold shadow-[0_0_30px_rgba(16,185,129,0.5)] border-2 border-white/20 hover:border-white transition-all pointer-events-auto cursor-pointer"
-                            >
-                                Get a quote
-                            </motion.button>
                         </motion.div>
                     </div>
 
