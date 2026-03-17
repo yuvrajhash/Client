@@ -78,7 +78,7 @@ function HoverFooter() {
   ];
 
   return (
-    <footer className="bg-gray-50 relative h-auto rounded-[3rem] overflow-hidden m-4 md:m-8 border border-gray-200">
+    <footer className="bg-mineralia-navy relative h-auto rounded-[3rem] overflow-hidden m-4 md:m-8 border border-white/10">
       <div className="max-w-7xl mx-auto p-8 md:p-14 z-40 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 md:gap-8 lg:gap-8 pb-12">
           {/* Brand section */}
@@ -92,7 +92,7 @@ function HoverFooter() {
                 className="h-14 w-auto object-contain"
               />
             </Link>
-            <p className="text-sm leading-relaxed text-gray-600">
+            <p className="text-sm leading-relaxed text-gray-300">
               The global standard in critical mineral supply. Partnering with 
               manufacturing leaders across 40+ countries to deliver premium 
               industrial minerals.
@@ -102,7 +102,7 @@ function HoverFooter() {
           {/* Footer link sections */}
           {footerLinks.map((section) => (
             <div key={section.title}>
-              <h4 className="text-gray-900 text-lg font-semibold mb-6">
+              <h4 className="text-white text-lg font-semibold mb-6">
                 {section.title}
               </h4>
               <ul className="space-y-3">
@@ -110,7 +110,7 @@ function HoverFooter() {
                   <li key={link.label} className="relative">
                     <Link
                       href={link.href}
-                      className="hover:text-[#3ca2fa] text-gray-600 transition-colors"
+                      className="hover:text-[#3ca2fa] text-gray-400 transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -125,12 +125,12 @@ function HoverFooter() {
 
           {/* Contact section */}
           <div>
-            <h4 className="text-gray-900 text-lg font-semibold mb-6">
+              <h4 className="text-white text-lg font-semibold mb-6">
               Contact Us
             </h4>
             <ul className="space-y-4">
               {contactInfo.map((item, i) => (
-                <li key={i} className="flex items-start space-x-3 text-gray-600">
+                <li key={i} className="flex items-start space-x-3 text-gray-400">
                   <div className="mt-1 shrink-0">{item.icon}</div>
                   {item.href ? (
                     <a
@@ -149,7 +149,7 @@ function HoverFooter() {
             </ul>
             <Link
               href="/contact"
-              className="mt-8 inline-block w-full text-center border border-gray-200 hover:border-[#3ca2fa] hover:bg-[#3ca2fa]/10 text-gray-900 py-3 rounded-full text-sm font-medium transition-all duration-300"
+              className="mt-8 inline-block w-full text-center border border-white/20 hover:border-[#3ca2fa] hover:bg-[#3ca2fa]/10 text-white py-3 rounded-full text-sm font-medium transition-all duration-300"
             >
               Request a Consultation
             </Link>
@@ -159,17 +159,17 @@ function HoverFooter() {
       </div>
 
       {/* Large MINERALIA text - above the line */}
-      <div className="flex h-[12rem] md:h-[20rem] justify-center items-center overflow-hidden relative z-20 bg-gray-50">
+      <div className="flex h-[12rem] md:h-[20rem] justify-center items-center overflow-hidden relative z-20 bg-mineralia-navy/0">
         <TextHoverEffect text="MINERALIA" className="z-10" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-8 md:px-14 pb-8 relative z-50 bg-gray-50">
-        <hr className="border-t border-gray-200" />
+      <div className="max-w-7xl mx-auto px-8 md:px-14 pb-8 relative z-50 bg-mineralia-navy/0">
+        <hr className="border-t border-white/10" />
 
         {/* Footer bottom - social, privacy, copyright */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0 pt-6">
           {/* Social icons */}
-          <div className="flex space-x-6 text-gray-500">
+          <div className="flex space-x-6 text-gray-400">
             {socialLinks.map(({ icon, label, href }) => (
               <a
                 key={label}
@@ -182,13 +182,13 @@ function HoverFooter() {
             ))}
           </div>
 
-          <div className="flex items-center gap-6 text-gray-500">
+          <div className="flex items-center gap-6 text-gray-400">
             <Link href="#" className="hover:text-[#3ca2fa] transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-[#3ca2fa] transition-colors">Terms of Service</Link>
           </div>
 
           {/* Copyright */}
-          <p className="text-center md:text-left text-gray-500">
+          <p className="text-center md:text-left text-gray-400">
             &copy; {new Date().getFullYear()} MINERALIA IMPEX PVT. LTD. All rights reserved.
           </p>
         </div>
