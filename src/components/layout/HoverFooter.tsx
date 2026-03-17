@@ -159,7 +159,7 @@ function HoverFooter() {
       </div>
 
       {/* Large MINERALIA text - above the line */}
-      <div className="flex h-[12rem] md:h-[20rem] justify-center items-center overflow-hidden relative z-20 bg-mineralia-navy/0">
+      <div className="flex h-[8rem] sm:h-[12rem] md:h-[20rem] justify-center items-center overflow-hidden relative z-20 bg-mineralia-navy/0">
         <TextHoverEffect text="MINERALIA" className="z-10" />
       </div>
 
