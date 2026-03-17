@@ -43,23 +43,24 @@ export const TextHoverEffect = ({
       className={cn("select-none uppercase cursor-pointer", className)}
     >
       <defs>
-        <linearGradient
+        <motion.radialGradient
           id="textGradient"
           gradientUnits="userSpaceOnUse"
-          cx="50%"
-          cy="50%"
           r="25%"
+          initial={{ cx: "50%", cy: "50%" }}
+          animate={maskPosition}
+          transition={{ duration: duration ?? 0, ease: "easeOut" }}
         >
           {hovered && (
             <>
-              <stop offset="0%" stopColor="#eab308" />
-              <stop offset="25%" stopColor="#ef4444" />
-              <stop offset="50%" stopColor="#80eeb4" />
-              <stop offset="75%" stopColor="#06b6d4" />
-              <stop offset="100%" stopColor="#8b5cf6" />
+              <stop offset="0%" stopColor="#bfdbfe" />
+              <stop offset="25%" stopColor="#93c5fd" />
+              <stop offset="50%" stopColor="#3ca2fa" />
+              <stop offset="75%" stopColor="#2563eb" />
+              <stop offset="100%" stopColor="#1e3a8a" />
             </>
           )}
-        </linearGradient>
+        </motion.radialGradient>
 
         <motion.radialGradient
           id="revealMask"
@@ -117,7 +118,7 @@ export const TextHoverEffect = ({
         textAnchor="middle"
         dominantBaseline="middle"
         stroke="url(#textGradient)"
-        strokeWidth="0.3"
+        strokeWidth="1.5"
         mask="url(#textMask)"
         className="fill-transparent font-[helvetica] text-5xl lg:text-6xl font-bold"
       >

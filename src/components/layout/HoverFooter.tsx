@@ -156,8 +156,18 @@ function HoverFooter() {
           </div>
         </div>
 
-        {/* Footer bottom */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0 pb-8 relative z-50 bg-gray-50">
+      </div>
+
+      {/* Large MINERALIA text - above the line */}
+      <div className="flex h-[12rem] md:h-[20rem] justify-center items-center overflow-hidden relative z-20 bg-gray-50">
+        <TextHoverEffect text="MINERALIA" className="z-10" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-8 md:px-14 pb-8 relative z-50 bg-gray-50">
+        <hr className="border-t border-gray-200" />
+
+        {/* Footer bottom - social, privacy, copyright */}
+        <div className="flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0 pt-6">
           {/* Social icons */}
           <div className="flex space-x-6 text-gray-500">
             {socialLinks.map(({ icon, label, href }) => (
@@ -182,13 +192,6 @@ function HoverFooter() {
             &copy; {new Date().getFullYear()} MINERALIA IMPEX PVT. LTD. All rights reserved.
           </p>
         </div>
-
-        <hr className="border-t border-gray-200" />
-      </div>
-
-      {/* Text hover effect */}
-      <div className="flex h-[12rem] md:h-[20rem] -mt-10 mb-0 justify-center items-center overflow-hidden relative z-20 pointer-events-none">
-        <TextHoverEffect text="MINERALIA" className="z-10" />
       </div>
 
       <FooterBackgroundGradient />

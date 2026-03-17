@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Truck, Search, Factory, ShieldCheck, Leaf, Anchor, Globe, Beaker, ArrowRight } from "lucide-react";
-import SourcingMap from "@/components/home/SourcingMap";
 import CTASection from "@/components/ui/CTASection";
 import FadeUp from "@/components/ui/FadeUp";
 
@@ -157,9 +156,6 @@ export default function SupplyChainPage() {
           </div>
         </div>
       </section>
-
-      {/* Sourcing Map */}
-      <SourcingMap />
 
       {/* Quality Assurance */}
       <section className="py-24 bg-white">
